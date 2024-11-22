@@ -25,7 +25,7 @@ func (s *TransactionUseCase) Transaction(ctx context.Context, req payload.ReqCre
 	reqBodyBytes.Bytes() // this is the []byte
 
 	// Execute
-	basicauth := base64.StdEncoding.EncodeToString([]byte(os.Getenv("GP_XENDIT_API_SANDBOX")))
+	basicauth := base64.StdEncoding.EncodeToString([]byte(os.Getenv("XENDIT_API_SANDBOX")))
 	request, err := http.NewRequest("POST", "https://api.xendit.co/v2/invoices", bytes.NewBuffer(reqBodyBytes.Bytes()))
 	request.Header.Set("Content-Type", "application/json; charset=UTF-8")
 	request.Header.Set("Authorization", "Basic "+basicauth)
