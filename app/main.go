@@ -19,7 +19,7 @@ func main() {
 		return
 	}
 
-	pth := filepath.Join(basepath + "/.env")
+	pth := filepath.Join(basepath + "/.envs")
 	fmt.Println(pth)
 	errs := godotenv.Load(pth)
 	if errs != nil {
