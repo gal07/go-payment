@@ -1,12 +1,13 @@
 package payload
 
 type ReqCreateTransaction struct {
-	Externalid    string        `json:"external_id"`
-	Amount        string        `json:"amount"`
-	Description   string        `json:"description"`
-	Customer      Customer      `json:"customer"`
-	CustomerNotif CustomerNotif `json:"customer_notification_preference"`
-	Items         []Items       `json:"items"`
+	Externalid      string        `json:"external_id"`
+	Amount          string        `json:"amount"`
+	Description     string        `json:"description"`
+	Customer        Customer      `json:"customer"`
+	CustomerNotif   CustomerNotif `json:"customer_notification_preference"`
+	Items           []Items       `json:"items"`
+	InvoiceDuration int           `json:"invoice_duration"`
 }
 
 type Customer struct {
