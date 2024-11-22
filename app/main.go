@@ -29,8 +29,7 @@ func main() {
 	// server stuff
 	serverPort := os.Getenv("SERVER_PORT")
 	fmt.Println(os.Getenv("SERVER_PORT"))
-	fmt.Println(os.Getenv("XENDIT_API"))
-	fmt.Println(os.Getenv("BASIC_AUTH_USERNAME"))
+	fmt.Println(os.Getenv("DATABASE_NAME"))
 
 	// release Mode
 	// release := os.Getenv("RELEASE_MODE")
