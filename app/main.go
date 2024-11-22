@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"go-payment/middleware"
 	"log"
 	"os"
@@ -19,6 +20,9 @@ func main() {
 
 	// server stuff
 	serverPort := os.Getenv("GP_SERVER_PORT")
+	fmt.Println(os.Getenv("GP_SERVER_PORT"))
+	fmt.Println(os.Getenv("GP_XENDIT_API"))
+	fmt.Println(os.Getenv("GP_BASIC_AUTH_USERNAME"))
 
 	// release Mode
 	// release := os.Getenv("RELEASE_MODE")
