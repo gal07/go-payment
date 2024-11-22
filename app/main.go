@@ -13,7 +13,7 @@ import (
 func main() {
 
 	// Load ENV
-	errs := godotenv.Load(".gpenv")
+	errs := godotenv.Load(".env", ".secondenv")
 	if errs != nil {
 		log.Fatal("Error loading .env file")
 	}
