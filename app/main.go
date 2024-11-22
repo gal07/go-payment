@@ -5,6 +5,7 @@ import (
 	"go-payment/middleware"
 	"log"
 	"os"
+	"path/filepath"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -13,7 +14,14 @@ import (
 func main() {
 
 	// Load ENV
-	errs := godotenv.Load(".env")
+	basepath, err := os.Getwd()
+	if err != nil {
+		return
+	}
+
+	pth := filepath.Join(basepath + "/.env")
+	fmt.Println(pth)
+	errs := godotenv.Load(pth)
 	if errs != nil {
 		log.Fatal("Error loading .env file")
 	}
