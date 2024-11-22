@@ -24,7 +24,7 @@ func NewEndPoint(
 	// Basic Auth
 	const rootEndpoint = "/api/v1/transaction"
 	r := engine.Group(rootEndpoint, gin.BasicAuth(gin.Accounts{
-		os.Getenv("BASIC_AUTH_USERNAME"): os.Getenv("BASIC_AUTH_PASSWORD"),
+		os.Getenv("GP_BASIC_AUTH_USERNAME"): os.Getenv("GP_BASIC_AUTH_PASSWORD"),
 	}))
 
 	// const rootEndpoint = "/api/v1/transaction"
