@@ -27,9 +27,9 @@ func main() {
 	}
 
 	// server stuff
-	serverPort := os.Getenv("SERVER_PORT")
-	fmt.Println(os.Getenv("SERVER_PORT"))
-	fmt.Println(os.Getenv("DATABASE_NAME"))
+	serverPort := os.Getenv("GP_SERVER_PORT")
+	fmt.Println(os.Getenv("GP_SERVER_PORT"))
+	fmt.Println(os.Getenv("GP_DATABASE_NAME"))
 
 	// release Mode
 	// release := os.Getenv("RELEASE_MODE")
