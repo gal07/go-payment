@@ -17,7 +17,7 @@ func (s *TransactionUseCase) Transaction(ctx context.Context, req payload.ReqCre
 	// Fill optional requirement
 	req.CustomerNotif.InvoiceCreated = []string{"whatsapp", "email"}
 	req.CustomerNotif.InvoicePaid = []string{"whatsapp", "email"}
-	req.Description = "Pembelian barang di revstore"
+	req.Description = "Pembelian barang di revstore https://revstoreweb.com"
 	req.InvoiceDuration = 600
 
 	reqBodyBytes := new(bytes.Buffer)
